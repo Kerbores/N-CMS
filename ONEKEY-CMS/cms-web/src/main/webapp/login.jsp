@@ -78,10 +78,10 @@ License: You must have a valid license purchased only from themeforest(the above
 					<form action="javascript:;" class="login-form" method="post">
 						<div class="row">
 							<div class="col-xs-4">
-								<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="请输入用户名" name="username" required />
+								<input class="form-control form-control-solid placeholder-no-fix" type="text" data-type="required" autocomplete="off" placeholder="请输入用户名" name="username"  />
 							</div>
 							<div class="col-xs-4">
-								<input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="请输入密码" name="password" required />
+								<input class="form-control form-control-solid placeholder-no-fix" data-type="password" type="password" autocomplete="off" placeholder="请输入密码" name="password"  />
 							</div>
 							<div class="col-xs-4 form-group ">
 								<div class="input-group">
@@ -152,7 +152,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		</div>
 	</div>
 	<!-- END : LOGIN PAGE 5-1 -->
-	<!--[if lt IE 9]>
+    <!--[if lt IE 9]>
 <script src="${base}/assets/metronic/global/plugins/respond.min.js"></script>
 <script src="${base}/assets/metronic/global/plugins/excanvas.min.js"></script>
 <![endif]-->
@@ -190,17 +190,20 @@ License: You must have a valid license purchased only from themeforest(the above
 				$(this).attr('src', Common.getRootPath() + "/captcha?length=4&" + Math.random());
 			}).on('keypress', '.login-form input', function(e) {
 				if (e.which == 13) {
-					if ($('.login-form').validate().form()) {
+                    console.log(2);
+					if ($('.login-form').validation()) {
 						$('.login-form').submit(); //form validation success, call ajax form submit
-					}
-					return false;
+					}else{
+                        return false;
+                    }
 				}
 			}).on('keypress', '.forget-form input', function(e) {
 				if (e.which == 13) {
-					if ($('.forget-form').validate().form()) {
+					if ($('.forget-form').validation()) {
 						$('.forget-form').submit();
-					}
-					return false;
+					}else{
+                        return false;
+                    }
 				}
 			}).on('click', '#forget-password', function() {
 				$('.login-form').hide();
