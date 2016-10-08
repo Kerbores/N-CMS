@@ -53,10 +53,16 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- END THEME GLOBAL STYLES -->
     <!-- BEGIN PAGE LEVEL STYLES -->
     <link href="${base}/assets/metronic/pages/css/login-5.min.css" rel="stylesheet" type="text/css"/>
+    <style>
+        .login-captcha {
+            padding-bottom: 30px;
+            cursor: pointer;
+        }
+    </style>
     <!-- END PAGE LEVEL STYLES -->
     <!-- BEGIN THEME LAYOUT STYLES -->
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="${base}/assets/metronic/pages/img/login/logo.ico"/>
     <script src="${base}/assets/metronic/global/plugins/jquery.min.js" type="text/javascript"></script>
     <script src="${base}/assets/n-csm/js/common.js" type="text/javascript"></script>
     <script src="${base}/assets/n-csm/js/validation.js" type="text/javascript"></script>
@@ -73,48 +79,63 @@ License: You must have a valid license purchased only from themeforest(the above
         </div>
         <div class="col-md-6 login-container bs-reset">
             <div class="login-content">
-                <h1>Metronic Admin Login</h1>
-                <p> Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat
-                    volutpat. Lorem ipsum dolor sit amet, coectetuer adipiscing. </p>
+                <h1>Nutz Onekey Cms</h1>
+                <p> 一个基于 nutz-onekey 实现的简单 cms 系统 </p>
                 <form action="javascript:;" class="login-form" method="post">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-xs-4">
                             <input class="form-control form-control-solid placeholder-no-fix" type="text"
-                                   autocomplete="off" placeholder="Username" name="username" required/></div>
-                        <div class="col-xs-6">
+                                   autocomplete="off" placeholder="请输入用户名" name="username" required/>
+                        </div>
+                        <div class="col-xs-4">
                             <input class="form-control form-control-solid placeholder-no-fix" type="password"
-                                   autocomplete="off" placeholder="Password" name="password" required/></div>
-                    </div>
-                    <div class="alert alert-danger display-hide">
-                        <button class="close" data-close="alert"></button>
-                        <span>Enter any username and password. </span>
+                                   autocomplete="off" placeholder="请输入密码" name="password" required/>
+                        </div>
+                        <div class="col-xs-4 form-group ">
+                            <div class="input-group">
+                                <div class="input-group-control">
+                                    <input type="text" class="form-control form-control-solid placeholder-no-fix"
+                                           placeholder="请输入验证码">
+                                    <div class="form-control-focus"></div>
+                                </div>
+                                <span class="input-group-btn btn-right">
+                                    <img src="${base}/captcha?length=4" class="login-captcha" title="点击刷新验证码">
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="rem-password">
-                                <p>Remember Me
+                                <p>记住我
                                     <input type="checkbox" class="rem-checkbox"/>
                                 </p>
                             </div>
                         </div>
                         <div class="col-sm-8 text-right">
                             <div class="forgot-password">
-                                <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                                <a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
                             </div>
-                            <button class="btn blue" type="submit">Sign In</button>
+                            <button class="btn blue" type="submit">登录</button>
                         </div>
                     </div>
                 </form>
                 <!-- BEGIN FORGOT PASSWORD FORM -->
                 <form class="forget-form" action="javascript:;" method="post">
-                    <h3 class="font-green">Forgot Password ?</h3>
-                    <p> Enter your e-mail address below to reset your password. </p>
+                    <h3 class="font-green">忘记密码 ?</h3>
+                    <p> 请输入你的邮箱进行密码重置操作. </p>
                     <div class="form-group">
-                        <input class="form-control placeholder-no-fix" type="text" autocomplete="off"
-                               placeholder="Email" name="email"/></div>
+                        <div class="form-group form-md-line-input has-success">
+                            <div class="input-icon right">
+                                <input type="text" class="form-control placeholder-no-fix" placeholder="请输入电子邮箱"
+                                       name="email">
+                                <i class="icon-envelope"></i>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-actions">
-                        <button type="button" id="back-btn" class="btn grey btn-default">Back</button>
-                        <button type="submit" class="btn blue btn-success uppercase pull-right">Submit</button>
+                        <button type="button" id="back-btn" class="btn grey btn-default">返回</button>
+                        <button type="submit" class="btn blue btn-success uppercase pull-right">重置</button>
                     </div>
                 </form>
                 <!-- END FORGOT PASSWORD FORM -->
@@ -142,7 +163,8 @@ License: You must have a valid license purchased only from themeforest(the above
                     </div>
                     <div class="col-xs-8 bs-reset">
                         <div class="login-copyright text-right">
-                            <p>Copyright &copy; Keenthemes 2015</p>
+                            <p><%= Application.config("copy.right") %>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -168,10 +190,6 @@ License: You must have a valid license purchased only from themeforest(the above
         type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="${base}/assets/metronic/global/plugins/jquery-validation/js/jquery.validate.min.js"
-        type="text/javascript"></script>
-<script src="${base}/assets/metronic/global/plugins/jquery-validation/js/additional-methods.min.js"
-        type="text/javascript"></script>
 <script src="${base}/assets/metronic/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
 <script src="${base}/assets/metronic/global/plugins/backstretch/jquery.backstretch.min.js"
         type="text/javascript"></script>
@@ -187,12 +205,42 @@ License: You must have a valid license purchased only from themeforest(the above
                     Common.getRootPath() + "/assets/metronic/pages/img/login/bg2.jpg",
                     Common.getRootPath() + "/assets/metronic/pages/img/login/bg3.jpg"
                 ], {
-                    fade: 1000,
-                    duration: 8000
+                    fade: 500,
+                    duration: 3000
                 }
         );
 
         $('.forget-form').hide();
+        $(document).on('click', '.login-captcha', function () {
+            $(this).attr('src', Common.getRootPath() + "/captcha?length=4&" + Math.random());
+        });
+        $('.login-form input').keypress(function (e) {
+            if (e.which == 13) {
+                if ($('.login-form').validate().form()) {
+                    $('.login-form').submit(); //form validation success, call ajax form submit
+                }
+                return false;
+            }
+        });
+
+        $('.forget-form input').keypress(function (e) {
+            if (e.which == 13) {
+                if ($('.forget-form').validate().form()) {
+                    $('.forget-form').submit();
+                }
+                return false;
+            }
+        });
+
+        $('#forget-password').click(function () {
+            $('.login-form').hide();
+            $('.forget-form').show();
+        });
+
+        $('#back-btn').click(function () {
+            $('.login-form').show();
+            $('.forget-form').hide();
+        });
     })
 </script>
 <!-- END PAGE LEVEL SCRIPTS -->
