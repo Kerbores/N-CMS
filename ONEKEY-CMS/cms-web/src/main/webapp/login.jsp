@@ -213,34 +213,27 @@ License: You must have a valid license purchased only from themeforest(the above
         $('.forget-form').hide();
         $(document).on('click', '.login-captcha', function () {
             $(this).attr('src', Common.getRootPath() + "/captcha?length=4&" + Math.random());
-        });
-        $('.login-form input').keypress(function (e) {
+        }).on('keypress', '.login-form input', function (e) {
             if (e.which == 13) {
                 if ($('.login-form').validate().form()) {
                     $('.login-form').submit(); //form validation success, call ajax form submit
                 }
                 return false;
             }
-        });
-
-        $('.forget-form input').keypress(function (e) {
+        }).on('keypress', '.forget-form input', function (e) {
             if (e.which == 13) {
                 if ($('.forget-form').validate().form()) {
                     $('.forget-form').submit();
                 }
                 return false;
             }
-        });
-
-        $('#forget-password').click(function () {
+        }).on('click', '#forget-password', function () {
             $('.login-form').hide();
             $('.forget-form').show();
-        });
-
-        $('#back-btn').click(function () {
+        }).on('click', '#back-btn', function () {
             $('.login-form').show();
             $('.forget-form').hide();
-        });
+        })
     })
 </script>
 <!-- END PAGE LEVEL SCRIPTS -->
