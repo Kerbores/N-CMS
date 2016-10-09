@@ -57,6 +57,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <!-- END THEME LAYOUT STYLES -->
 <link rel="shortcut icon" href="${base}/assets/metronic/pages/img/login/logo.ico" />
 <script src="${base}/assets/metronic/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="${base}/assets/layer/layer.js" type="text/javascript"></script>
 <script src="${base}/assets/n-csm/js/common.js" type="text/javascript"></script>
 <script src="${base}/assets/n-csm/js/validation.js" type="text/javascript"></script>
 </head>
@@ -78,15 +79,15 @@ License: You must have a valid license purchased only from themeforest(the above
 					<form action="javascript:;" class="login-form" method="post">
 						<div class="row">
 							<div class="col-xs-4">
-								<input class="form-control form-control-solid placeholder-no-fix" type="text" data-type="required" autocomplete="off" placeholder="请输入用户名" name="username" />
+								<input class="form-control form-control-solid placeholder-no-fix" type="text" data-type="required" autocomplete="off" placeholder="请输入用户名" name="username" id="user" />
 							</div>
 							<div class="col-xs-4">
-								<input class="form-control form-control-solid placeholder-no-fix" data-type="password" type="password" autocomplete="off" placeholder="请输入密码" name="password" />
+								<input class="form-control form-control-solid placeholder-no-fix" data-type="password" type="password" autocomplete="off" placeholder="请输入密码" name="password" id="password" />
 							</div>
 							<div class="col-xs-4 form-group ">
 								<div class="input-group">
 									<div class="input-group-control">
-										<input type="text" class="form-control form-control-solid placeholder-no-fix" placeholder="请输入验证码">
+										<input type="text" class="form-control form-control-solid placeholder-no-fix" placeholder="请输入验证码" id="captcha">
 										<div class="form-control-focus"></div>
 									</div>
 									<span class="input-group-btn btn-right"> <img src="${base}/captcha?length=4" class="login-captcha" title="点击刷新验证码">
@@ -98,7 +99,7 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="col-sm-4">
 								<div class="rem-password">
 									<p>
-										记住我 <input type="checkbox" class="rem-checkbox" />
+										记住我 <input type="checkbox" class="rem-checkbox" id="rememberMeCheckBox" />
 									</p>
 								</div>
 							</div>
@@ -106,7 +107,7 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="forgot-password">
 									<a href="javascript:;" id="forget-password" class="forget-password">忘记密码?</a>
 								</div>
-								<button class="btn blue" type="submit">登录</button>
+								<button class="btn blue" type="button" id="login-btn">登录</button>
 							</div>
 						</div>
 					</form>
@@ -202,7 +203,9 @@ License: You must have a valid license purchased only from themeforest(the above
 				LOGIN.toReset();
 			}).on('click', '#back-btn', function() {
 				LOGIN.toLogin();
-			})
+			}).on('click', '#login-btn', function() {
+				LOGIN.doLogin();
+			});
 		})
 		var LOGIN = {
 			refreshCaptcha : function() { //刷新验证码
@@ -210,7 +213,20 @@ License: You must have a valid license purchased only from themeforest(the above
 			},
 			doLogin : function() { //登录
 				if ($('.login-form').validation()) {
-					$('.login-form').submit(); //form validation success, call ajax form submit
+					$.post(Common.getRootPath() + '/system/login', {
+						user : $('#user').val(),
+						password : $('#password').val(),
+						captcha : $('#captcha').val(),
+						rememberMe : $('#rememberMeCheckBox')[0].checked
+					}, function(result) {
+						if (result.operationState == 'SUCCESS') {
+							//TODO 跳转到系统主界面
+							location.href = '${base}/system/main'
+						} else {
+							LOGIN.refreshCaptcha();
+							Common.validationFail(result.data.reason, $('#login-btn'));
+						}
+					}, 'json');
 				} else {
 					return false;
 				}

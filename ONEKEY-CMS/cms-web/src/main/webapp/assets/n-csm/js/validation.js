@@ -84,7 +84,7 @@ $.fn.validation = function (options) {
         },
         validationcallBack: function (status, dom, errorMsg, defaultValue) {
             status || function () {
-                alert(errorMsg);
+                Common.validationFail(errorMsg, dom);//仅限此项目使用
             }.call()
         },
         allowedElement: ['input', 'INPUT', 'select', 'SELECT'],

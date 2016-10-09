@@ -7,6 +7,9 @@ var Common = {
     },
     getRootPath: function () {
         return contextPath;
+    },
+    validationFail:function(msg,dom){
+    	layer.tips(msg,dom);
     }
 }
 
