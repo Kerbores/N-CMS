@@ -7,12 +7,14 @@ import org.nutz.aop.interceptor.async.Async;
 import org.nutz.castor.Castors;
 import org.nutz.dao.Dao;
 import org.nutz.ioc.loader.annotation.IocBean;
+import org.nutz.json.Json;
 import org.nutz.lang.Lang;
 import org.nutz.lang.Stopwatch;
 import org.nutz.lang.Strings;
 import org.nutz.log.Log;
 import org.nutz.log.Logs;
 import org.nutz.mvc.Mvcs;
+
 
 import club.zhcs.cms.bean.apm.APMAlarm;
 import club.zhcs.cms.bean.apm.APMAlarm.Type;
@@ -48,7 +50,6 @@ public class APM implements MethodInterceptor {
 
 	@Async
 	public void alarm(Type type, String msg) {
-		System.err.println(2);
 		APMAlarm alarm = new APMAlarm();
 		alarm.setType(type);
 		alarm.setMsg(msg);
@@ -87,6 +88,8 @@ public class APM implements MethodInterceptor {
 		OperationLog operationLog = new OperationLog();
 
 		operationLog.setAccount(user);
+		operationLog.setMethodMeta(chain.getCallingMethod().toGenericString());
+		operationLog.setParameters(Json.toJson(chain.getArgs()));
 		operationLog.setAction(log.methods());
 		operationLog.setIp(ip);
 		operationLog.setModule(log.module());
@@ -96,7 +99,7 @@ public class APM implements MethodInterceptor {
 		stopwatch.stop();
 
 		Object obj = chain.getReturn();
-
+		operationLog.setMethodReturn(Json.toJson(obj));
 		if (obj instanceof Result) {
 			operationLog.setDescription(Castors.me().castTo(obj, Result.class).isSuccess() ? "操作成功" : "操作失败");
 		}

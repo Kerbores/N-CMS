@@ -2,6 +2,7 @@ package club.zhcs.cms.bean.log;
 
 import java.util.Date;
 
+import org.nutz.dao.entity.annotation.ColDefine;
 import org.nutz.dao.entity.annotation.Column;
 import org.nutz.dao.entity.annotation.Comment;
 import org.nutz.dao.entity.annotation.Table;
@@ -39,6 +40,21 @@ public class OperationLog extends Entity {
 	@Comment("功能描述")
 	private String description;
 
+	@Column("opt_method_meta")
+	@Comment("方法描述")
+	@ColDefine(width = 200)
+	private String methodMeta;
+
+	@Column("opt_parameters")
+	@Comment("入参信息")
+	@ColDefine(width = 6000)
+	private String parameters;
+
+	@Column("opt_method_return")
+	@Comment("响应信息")
+	@ColDefine(width = 6000)
+	private String methodReturn;
+
 	@Column("opt_action_time")
 	@Comment("操作时间")
 	private Date actionTime = Times.now();
@@ -49,6 +65,51 @@ public class OperationLog extends Entity {
 
 	public String getAccount() {
 		return account;
+	}
+
+	/**
+	 * @return the methodMeta
+	 */
+	public String getMethodMeta() {
+		return methodMeta;
+	}
+
+	/**
+	 * @param methodMeta
+	 *            the methodMeta to set
+	 */
+	public void setMethodMeta(String methodMeta) {
+		this.methodMeta = methodMeta;
+	}
+
+	/**
+	 * @return the parameters
+	 */
+	public String getParameters() {
+		return parameters;
+	}
+
+	/**
+	 * @param parameters
+	 *            the parameters to set
+	 */
+	public void setParameters(String parameters) {
+		this.parameters = parameters;
+	}
+
+	/**
+	 * @return the methodReturn
+	 */
+	public String getMethodReturn() {
+		return methodReturn;
+	}
+
+	/**
+	 * @param methodReturn
+	 *            the methodReturn to set
+	 */
+	public void setMethodReturn(String methodReturn) {
+		this.methodReturn = methodReturn;
 	}
 
 	public String getAction() {
