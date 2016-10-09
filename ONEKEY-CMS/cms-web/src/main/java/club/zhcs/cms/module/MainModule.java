@@ -60,7 +60,7 @@ import club.zhcs.titans.utils.db.Result;
 @UrlMappingBy(ApidocUrlMapping.class)
 @ChainBy(type = ThunderChainMaker.class, args = {})
 @Filters({ @By(type = CheckSession.class, args = { SessionKeys.USER_KEY, "/" }) })
-@Api(name = "N-CMS 开放 API", description = "N-CMS 开放 API", match = ApiMatchMode.NONE)
+@Api(name = "N-CMS 开放 API", description = "N-CMS 开放 API", match = ApiMatchMode.ONLY)
 @IocBy(type = ComboIocProvider.class, args = { "*anno", "club.zhcs", "*tx", "*js", "ioc", "*async", "*quartz", "quartz", "*sigar", "sigar" })
 public class MainModule extends AbstractBaseModule {
 
@@ -104,6 +104,13 @@ public class MainModule extends AbstractBaseModule {
 	@Filters
 	public Result hello(HttpServletRequest request) {
 		return Result.success().addData("msg", "Hello nutz-thunder!").addData("url", request.getRequestURL());
+	}
+	
+	@At
+	@Filters
+	@Ok("beetl:pages/test/test.html")
+	public Result test() {
+		return Result.success();
 	}
 
 	@At("/")
