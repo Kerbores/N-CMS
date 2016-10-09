@@ -143,7 +143,7 @@ var Demo = function () {
             if (sidebarMenuOption === 'hover') {
                 if (sidebarOption == 'fixed') {
                     $('.sidebar-menu-option', panel).val("accordion");
-                    alert("Hover Sidebar Menu is not compatible with Fixed Sidebar Mode. Select Default Sidebar Mode Instead.");
+                    alert("悬停侧边栏和固定侧边栏模式不兼容,请选择默认侧边栏模式.");
                 } else {
                     $(".page-sidebar-menu").addClass("page-sidebar-menu-hover-submenu");
                 }                
