@@ -56,7 +56,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<div class="page-header-inner ">
 			<!-- BEGIN LOGO -->
 			<div class="page-logo">
-				<a href="index.html"> <img src="${base}/assets/metronic/layouts/layout/img/logo.png" alt="logo" class="logo-default" />
+				<a href="index.html"> <img src="${base}/assets/metronic/pages/img/login/logo.png" width="86" height="14" alt="logo" class="logo-default" />
 				</a>
 				<div class="menu-toggler sidebar-toggler"></div>
 			</div>
@@ -845,14 +845,28 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!-- END PAGE BAR -->
 				<!-- BEGIN PAGE TITLE-->
-				<h3 class="page-title">
-					Blank Page Layout <small>blank page layout</small>
+				<!--# if(null != obj.title!){ #-->
+				<h3 class="page-title">${obj.title!}
 				</h3>
+				<!--# }  #-->
 				<!-- END PAGE TITLE-->
 				<!-- END PAGE HEADER-->
-				<div class="note note-info">
-					<p>A black page template with a minimal dependency assets to use as a base for any custom page you create</p>
+				<!--# if(config("debug")){ #-->
+				<div class="portlet box blue">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="ace-icon fa fa-bug"></i> 调试数据
+						</div>
+						<div class="tools">
+							<a href="javascript:;" class="expand" data-original-title="" title=""> </a>
+						</div>
+					</div>
+					<div class="portlet-body" style="display: none;">
+						<pre>${obj}</pre>
+					</div>
 				</div>
+				<!--#	} #-->
+				${layoutContent}
 			</div>
 			<!-- END CONTENT BODY -->
 		</div>

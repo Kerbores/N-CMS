@@ -105,12 +105,12 @@ public class MainModule extends AbstractBaseModule {
 	public Result hello(HttpServletRequest request) {
 		return Result.success().addData("msg", "Hello nutz-thunder!").addData("url", request.getRequestURL());
 	}
-	
+
 	@At
 	@Filters
 	@Ok("beetl:pages/test/test.html")
 	public Result test() {
-		return Result.success();
+		return Result.success().setTitle("测试页面");
 	}
 
 	@At("/")
