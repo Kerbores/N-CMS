@@ -11,7 +11,8 @@ var App = function() {
 
     var resizeHandlers = [];
 
-    var assetsPath = '../assets/';
+    var assetsPath = Common.getRootPath() + '/assets/metronic/';
+    
 
     var globalImgPath = 'global/img/';
 
