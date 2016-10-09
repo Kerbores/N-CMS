@@ -6,15 +6,10 @@ import org.beetl.core.Function;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description shiro的权限检查函数
- * 
- * @copyright copyright©2016 zhcs.club
- *
- * @createTime 2016年8月23日 上午8:49:43
  */
 public class ShiroPermissionFuntion implements Function {
 

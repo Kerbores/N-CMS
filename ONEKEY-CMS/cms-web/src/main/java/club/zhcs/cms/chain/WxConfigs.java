@@ -17,15 +17,9 @@ import com.google.common.cache.RemovalNotification;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project platform-web-customer
- *
- * @file WxConfigs.java
- *
- * @description 微信 jssdk 的配置信息获取
- *
- * @time 2016年7月27日 下午12:52:59
+ * @email kerbores@gmail.com
  *
  */
 @IocBean

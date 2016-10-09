@@ -18,15 +18,9 @@ import club.zhcs.titans.utils.db.Result;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-biz
- *
- * @file UserService.java
- *
- * @description 用户
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
 public class UserService extends BaseService<User> {

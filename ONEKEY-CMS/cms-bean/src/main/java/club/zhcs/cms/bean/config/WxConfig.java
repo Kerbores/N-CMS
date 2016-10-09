@@ -8,15 +8,10 @@ import club.zhcs.titans.utils.db.po.Entity;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description 微信配置
- * 
- * @copyright copyright©2016 zhcs.club
- *
- * @createTime 2016年8月3日 上午9:55:52
  */
 @Table("t_wechat_config")
 @Comment("微信配置")

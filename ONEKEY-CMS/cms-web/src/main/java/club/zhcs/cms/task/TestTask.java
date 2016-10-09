@@ -10,15 +10,9 @@ import org.quartz.JobExecutionException;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-web
- *
- * @file Test.java
- *
- * @description 测试任务
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
 @IocBean

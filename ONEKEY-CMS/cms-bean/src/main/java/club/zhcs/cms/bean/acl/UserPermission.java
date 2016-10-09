@@ -8,16 +8,10 @@ import club.zhcs.titans.utils.db.po.Entity;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description 用户权限关系实体
- * 
- * @copyright 内部代码,禁止转发
- *
- *
- * @time 2016年1月26日 下午2:19:54
  */
 @Table("t_user_permission")
 @Comment("用户权限关系表")

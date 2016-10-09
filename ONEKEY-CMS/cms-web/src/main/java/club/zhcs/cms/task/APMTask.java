@@ -47,15 +47,10 @@ import club.zhcs.titans.utils.db.Result;
 import com.google.common.collect.Lists;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project app
- *
- * @file APMTask.java
- *
- * @description 告警检测业务
- *
- * @time 2016年3月15日 上午11:54:46
+ * @email kerbores@gmail.com
  *
  */
 @IocBean(name = "apmTask", fields = "dao", create = "init")

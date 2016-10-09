@@ -4,15 +4,10 @@ import org.beetl.core.Context;
 import org.beetl.core.Function;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project biz
- *
- * @file StringToEunm.java
- *
- * @description // TODO write some description of this class
- *
- * @time 2016年3月29日 上午9:33:21
+ * @email kerbores@gmail.com
  *
  */
 public class AlarmTypeFun implements Function {

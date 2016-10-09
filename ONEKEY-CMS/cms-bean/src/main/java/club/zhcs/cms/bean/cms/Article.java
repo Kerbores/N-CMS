@@ -9,15 +9,10 @@ import org.nutz.lang.random.R;
 import club.zhcs.titans.utils.db.po.Entity;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project thunder-bean
- *
- * @file Article.java
- *
- * @description 文章
- *
- * @time 2016年9月7日 下午3:54:16
+ * @email kerbores@gmail.com
  *
  */
 @Table("t_article")

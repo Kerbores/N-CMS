@@ -18,15 +18,10 @@ import club.zhcs.cms.vo.InstalledRole;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description
- * 
- * @copyright copyright©2016 zhcs.club
- *
- * @createTime 2016年8月23日 下午1:13:25
  */
 public class ThunderRoleAnnotationHandler extends RoleAnnotationHandler {
 

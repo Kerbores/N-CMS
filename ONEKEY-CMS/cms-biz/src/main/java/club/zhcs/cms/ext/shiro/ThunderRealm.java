@@ -23,15 +23,9 @@ import club.zhcs.cms.biz.shiro.ShiroUserService;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-biz
- *
- * @file ThunderRealm.java
- *
- * @description realm
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
 public class ThunderRealm extends AuthorizingRealm {

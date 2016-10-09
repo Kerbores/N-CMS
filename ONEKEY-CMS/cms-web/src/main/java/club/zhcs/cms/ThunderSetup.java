@@ -43,6 +43,13 @@ import club.zhcs.cms.biz.config.WxConfigService;
 import club.zhcs.cms.vo.InstallPermission;
 import club.zhcs.cms.vo.InstalledRole;
 
+/**
+ * 
+ * @author kerbores
+ *
+ * @email kerbores@gmail.com
+ *
+ */
 public class ThunderSetup implements Setup {
 	private static final Log log = Logs.get();
 

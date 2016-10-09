@@ -28,17 +28,9 @@ import club.zhcs.titans.nutz.processor.KerboresFailProcessor;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-web
- *
- * @file ThunderChainMaker.java
- *
- * @description
- *
- * @copyright 内部代码,禁止转发
- *
- * @time 2016年5月16日 下午11:22:43
+ * @email kerbores@gmail.com
  *
  */
 public class ThunderChainMaker extends KerboresActionChainMaker {

@@ -20,15 +20,10 @@ import club.zhcs.titans.utils.biz.BaseService;
 import com.google.common.collect.Lists;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project platform-service
- *
- * @file WechatMenuService.java
- *
- * @description 微信菜单业务
- *
- * @time 2016年8月3日 下午10:53:27
+ * @email kerbores@gmail.com
  *
  */
 public class WechatMenuService extends BaseService<WechatMenu> {

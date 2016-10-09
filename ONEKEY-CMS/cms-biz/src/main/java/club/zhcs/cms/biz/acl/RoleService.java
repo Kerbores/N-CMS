@@ -16,15 +16,9 @@ import club.zhcs.titans.utils.db.Result;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-biz
- *
- * @file RoleService.java
- *
- * @description 角色业务
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
 public class RoleService extends BaseService<Role> {

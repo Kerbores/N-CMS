@@ -46,18 +46,11 @@ import club.zhcs.titans.utils.db.Result;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-web
- *
- * @file MainModule.java
- *
- * @description 主模块
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
-
 @Ok("json")
 @Fail("http:500")
 @Modules(scanPackage = true)

@@ -9,15 +9,10 @@ import org.nutz.dao.entity.annotation.Table;
 import club.zhcs.titans.utils.db.po.Entity;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project bean
- *
- * @file Config.java
- *
- * @description Config
- *
- * @time 2016年3月15日 下午1:20:36
+ * @email kerbores@gmail.com
  *
  */
 @Table("t_sys_config")

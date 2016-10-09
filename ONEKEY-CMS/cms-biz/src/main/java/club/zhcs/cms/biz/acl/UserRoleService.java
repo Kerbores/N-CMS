@@ -5,15 +5,9 @@ import club.zhcs.titans.utils.biz.BaseService;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project thunder-biz
- *
- * @file UserRoleService.java
- *
- * @description //TODO
- *
- * @time 2016年3月8日 上午10:51:26
+ * @email kerbores@gmail.com
  *
  */
 public class UserRoleService extends BaseService<UserRole> {

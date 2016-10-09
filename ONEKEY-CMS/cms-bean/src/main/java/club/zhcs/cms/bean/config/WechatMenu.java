@@ -12,15 +12,10 @@ import club.zhcs.titans.utils.db.po.Entity;
 import com.google.common.collect.Lists;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project platform-domain
- *
- * @file WechatMenu.java
- *
- * @description 微信菜单
- *
- * @time 2016年8月3日 下午10:35:05
+ * @email kerbores@gmail.com
  *
  */
 @Table("t_wechat_menu")

@@ -34,13 +34,11 @@ import club.zhcs.cms.ext.shiro.anno.ThunderRequiresPermissions;
 import club.zhcs.cms.vo.InstallPermission;
 
 /**
- * Checks to see if a @
- * {@link org.apache.shiro.authz.annotation.NutzRequiresPermissionss
- * NutzRequiresPermissionss} annotation is declared, and if so, performs a
- * permission check to see if the calling <code>Subject</code> is allowed
- * continued access.
+ * 
+ * @author kerbores
  *
- * @since 0.9.0
+ * @email kerbores@gmail.com
+ *
  */
 public class ThunderPermissionAnnotationHandler extends PermissionAnnotationHandler {
 

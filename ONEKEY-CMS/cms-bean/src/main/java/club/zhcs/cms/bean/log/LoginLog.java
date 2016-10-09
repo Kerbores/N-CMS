@@ -10,15 +10,10 @@ import org.nutz.lang.Times;
 import club.zhcs.titans.utils.db.po.Entity;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project bean
- *
- * @file LoginLog.java
- *
- * @description 登录日志
- *
- * @time 2016年3月15日 下午4:37:02
+ * @email kerbores@gmail.com
  *
  */
 @Table("t_user_login")

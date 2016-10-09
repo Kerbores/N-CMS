@@ -12,15 +12,9 @@ import org.nutz.mvc.impl.processor.AbstractProcessor;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project platform-web-customer
- *
- * @file WxJsSdkConfigProcessor.java
- *
- * @description JSSDK 注入
- *
- * @time 2016年7月27日 下午12:53:27
+ * @email kerbores@gmail.com
  *
  */
 public class WxJsSdkConfigProcessor extends AbstractProcessor {

@@ -6,17 +6,17 @@ import org.nutz.mvc.Mvcs;
 /**
  * 
  * @author kerbores
+ *
  * @email kerbores@gmail.com
  *
  */
 public class Application {
 
 	/**
+	 * 
+	 * @author kerbores
 	 *
-	 * @author 王贵源
-	 * @description session keys
-	 * @Copyright 内部代码,禁止转发
-	 * @date 2015年12月28日 下午9:54:31
+	 * @email kerbores@gmail.com
 	 *
 	 */
 	public static class SessionKeys {

@@ -8,15 +8,10 @@ import org.nutz.mvc.Mvcs;
 import org.nutz.weixin.impl.WxApi2Impl;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @projectthunder-biz
- *
- * @file WechatAuthFun.java
- *
- * @description WechatAuthFun.java
- *
- * @time 2016年9月5日 下午1:08:37
+ * @email kerbores@gmail.com
  *
  */
 public class WechatAuthFun implements Function {

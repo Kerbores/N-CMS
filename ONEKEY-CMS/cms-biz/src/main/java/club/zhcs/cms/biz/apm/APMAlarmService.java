@@ -4,15 +4,10 @@ import club.zhcs.cms.bean.apm.APMAlarm;
 import club.zhcs.titans.utils.biz.BaseService;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project biz
- *
- * @file APMAlarmService.java
- *
- * @description // TODO write some description of this class
- *
- * @time 2016年3月15日 下午4:53:40
+ * @email kerbores@gmail.com
  *
  */
 public class APMAlarmService extends BaseService<APMAlarm> {

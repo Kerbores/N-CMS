@@ -11,15 +11,10 @@ import club.zhcs.cms.vo.InstallPermission;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description
- * 
- * @copyright copyright©2016 zhcs.club
- *
- * @createTime 2016年8月23日 下午12:59:26
  */
 @Target({ ElementType.TYPE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

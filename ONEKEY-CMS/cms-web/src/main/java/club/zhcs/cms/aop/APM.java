@@ -21,15 +21,10 @@ import club.zhcs.titans.utils.common.Ips;
 import club.zhcs.titans.utils.db.Result;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project app
- *
- * @file APM.java
- *
- * @description // TODO write some description of this class
- *
- * @time 2016年3月15日 上午9:42:13
+ * @email kerbores@gmail.com
  *
  */
 @IocBean(name = "apm", fields = "dao")

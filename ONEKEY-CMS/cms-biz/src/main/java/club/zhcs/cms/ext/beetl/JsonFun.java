@@ -5,15 +5,10 @@ import org.beetl.core.Function;
 import org.nutz.json.Json;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project platform-service
- *
- * @file JsonFun.java
- *
- * @description Json 函数
- *
- * @time 2016年8月4日 上午9:13:11
+ * @email kerbores@gmail.com
  *
  */
 public class JsonFun implements Function {

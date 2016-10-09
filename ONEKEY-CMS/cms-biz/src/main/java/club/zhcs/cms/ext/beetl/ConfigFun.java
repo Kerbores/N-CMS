@@ -8,16 +8,10 @@ import org.nutz.mvc.Mvcs;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description Application 全局函数
- * 
- * @copyright 内部代码,禁止转发
- *
- *
- * @time 2016年1月26日 下午3:32:22
  */
 public class ConfigFun implements Function {
 

@@ -13,15 +13,10 @@ import org.nutz.lang.random.R;
 import club.zhcs.titans.utils.db.po.Entity;
 
 /**
- * @author Kerbores(kerbores@gmail.com)
+ * 
+ * @author kerbores
  *
- * @project bean
- *
- * @file APMAlarm.java
- *
- * @description 应用性能告警
- *
- * @time 2016年3月15日 下午3:30:08
+ * @email kerbores@gmail.com
  *
  */
 @Table("t_apm_alarm")

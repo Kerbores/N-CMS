@@ -2,15 +2,10 @@ package club.zhcs.cms.vo;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description 内置角色
- * 
- * @copyright copyright©2016 zhcs.club
- *
- * @createTime 2016年8月23日 上午8:54:06
  */
 public enum InstalledRole {
 	/**

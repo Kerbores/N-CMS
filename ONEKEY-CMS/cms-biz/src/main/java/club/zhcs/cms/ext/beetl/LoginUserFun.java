@@ -8,16 +8,10 @@ import club.zhcs.cms.Application.SessionKeys;
 
 /**
  * 
- * @author 王贵源
+ * @author kerbores
  *
- * @email kerbores@kerbores.com
+ * @email kerbores@gmail.com
  *
- * @description session 登录用户函数
- * 
- * @copyright 内部代码,禁止转发
- *
- *
- * @time 2016年1月26日 下午3:32:45
  */
 public class LoginUserFun implements Function {
 

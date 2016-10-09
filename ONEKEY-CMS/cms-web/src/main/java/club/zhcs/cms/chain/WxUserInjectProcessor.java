@@ -10,15 +10,9 @@ import org.nutz.mvc.impl.processor.AbstractProcessor;
 
 /**
  * 
- * @author Kerbores(kerbores@gmail.com)
+ * @author kerbores
  *
- * @project platform-web-customer
- *
- * @file WxUserInjectProcessor.java
- *
- * @description 微信用户注入
- *
- * @time 2016年7月27日 下午12:53:50
+ * @email kerbores@gmail.com
  *
  */
 public class WxUserInjectProcessor extends AbstractProcessor {
